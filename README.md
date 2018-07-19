@@ -17,7 +17,7 @@ To add a tests, simply add a new directory with the given input `input.log`, the
 * Setup your test directory as follows
 
 ```sh
-__tests__
+tests
   crawlers
     input.log
     logstash.conf
@@ -32,8 +32,9 @@ __tests__
 * Run your tests
 
 ```sh
-# ./test.sh <test-parent-directory>
-./test.sh __tests__
+./test.sh
+# Or you can specify your dir.
+./test.sh testing_dir
 ```
 
 NOTE: Multiline logs in logstash need translate in reverse to filebeat in terms of `multiline.match` from `previous` => `after` and `next` => `before`.
